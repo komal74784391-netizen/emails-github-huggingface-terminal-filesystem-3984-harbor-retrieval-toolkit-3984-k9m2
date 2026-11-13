@@ -1,0 +1,18 @@
+# Configuration for the Harbor baseline runs.
+parameters:
+  - name: index_backend
+    type: str
+    default: "bm25"
+    description: Backend used to build the retrieval index.
+  - name: recall_k
+    type: int
+    default: 100
+    description: Number of documents scored for each query.
+  - name: query_terms
+    type: List[str]
+    default: []
+    description: Seed terms appended to every query.
+  - name: alpha
+    type: float
+    default: 0.6
+    description: Weight of the lexical score in the hybrid ranker.
